@@ -1,4 +1,5 @@
 # jhipsterdemo01
+<<<<<<< HEAD
 This application was generated using JHipster 5.5.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v5.5.0](https://www.jhipster.tech/documentation-archive/v5.5.0).
 
 ## Development
@@ -158,3 +159,6 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Protractor]: https://angular.github.io/protractor/
 [Leaflet]: http://leafletjs.com/
 [DefinitelyTyped]: http://definitelytyped.org/
+=======
+这是一个测试单项目
+>>>>>>> a8c7cc140cbd7666133ae2a7cdfd6da219355d8c

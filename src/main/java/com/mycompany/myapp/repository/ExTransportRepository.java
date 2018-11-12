@@ -16,5 +16,6 @@ public interface ExTransportRepository extends JpaRepository<ExTransport, Long> 
 
     List<ExTransport> findByEx_extransport(String eeeeexxxx);
     int a = 5;
+    int b=10;
 
 }

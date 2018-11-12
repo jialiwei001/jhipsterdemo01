@@ -1,0 +1,23 @@
+
+{
+    "jhipsterdemo01App": {
+        "exTransport" : {
+            "home": {
+                "title": "Ex Transports",
+                "createLabel": "创建新 Ex Transport",
+                "createOrEditLabel": "创建或编辑 Ex Transport"
+            },
+            "created": "Ex Transport {{ param }} 创建成功",
+            "updated": "Ex Transport {{ param }} 更新成功",
+            "deleted": "Ex Transport {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Ex Transport {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Ex Transport"
+            },
+            "ex_extransport": "Ex Extransport",
+            "ex_extransporta": "Ex Extransporta"
+        }
+    }
+}

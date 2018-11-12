@@ -12,6 +12,18 @@ import activate, { ActivateState } from 'app/modules/account/activate/activate.r
 import password, { PasswordState } from 'app/modules/account/password/password.reducer';
 import settings, { SettingsState } from 'app/modules/account/settings/settings.reducer';
 import passwordReset, { PasswordResetState } from 'app/modules/account/password-reset/password-reset.reducer';
+// prettier-ignore
+import exTransport, {
+  ExTransportState
+} from 'app/entities/ex-transport/ex-transport.reducer';
+// prettier-ignore
+import author, {
+  AuthorState
+} from 'app/entities/author/author.reducer';
+// prettier-ignore
+import book, {
+  BookState
+} from 'app/entities/book/book.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -25,6 +37,9 @@ export interface IRootState {
   readonly passwordReset: PasswordResetState;
   readonly password: PasswordState;
   readonly settings: SettingsState;
+  readonly exTransport: ExTransportState;
+  readonly author: AuthorState;
+  readonly book: BookState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -40,6 +55,9 @@ const rootReducer = combineReducers<IRootState>({
   passwordReset,
   password,
   settings,
+  exTransport,
+  author,
+  book,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

@@ -1,0 +1,337 @@
+/*境外转运公司信息上链（机场B类快件）*/
+entity ExTransport {
+    id Long
+    dataId String required
+    type String required
+    /*分运单号*/
+    billNo String required
+    /*境外快递名称*/
+    expressName String required
+    /*境内快递名称*/
+    expressCo String required
+    tradeCo String required
+    /*收件人*/
+    receiver String required
+    /*收件人地址*/
+    receiverAddress String required
+    /*收件人电话*/
+    receiverTel String required
+    /*发件人*/
+    sender String required
+    /*发件人地址*/
+    senderAddress String required
+    /*发件人电话*/
+    senderTel String required
+    /*起运港*/
+    fromPort String required
+    /*起运国家*/
+    fromCountry String required
+    /*目的港*/
+    toPort String required
+    /*目的国家*/
+    toCountry String required
+    /*中转信息*/
+    stopOver String required
+    /*jsonData*/
+    jsonData TextBlob
+}
+
+/**
+    B类快件主运单信息
+**/
+entity ExMAWBInfo {
+    id Long,
+    dataId String required,
+    type String required,
+   /* 主运单号 */
+   masterBillNo String required,
+   /* 航班号 */
+   flightNo String required,
+   /* 航班日期 */
+   flightDate String required,
+   /* 收货人 */
+   consignee String required,
+   /* 发货人 */
+   shipper String required,
+   /* 通知人 */
+   notifier String required,
+   /* 承运人 */
+   carrier String required,
+   /* 装货港 */
+   fromPort String required,
+   /* 装货国家 */
+   fromCountry String required,
+   /* 目的港 */
+   toPort String required,
+/* 目的国家 */
+   toCountry String required,
+   /* 中转信息 */
+   stopOver String required,
+   /* 装货日期 */
+   loadDate String required,
+   /* 起运时间 */
+   eTd String required,
+   /* 抵达时间 */
+   eTa String required,
+   /* 件数 */
+   packNo String required,
+   /* 包装 */
+   packCode String required,
+   /* 毛重 */
+   grossWeight String required,
+   /* 净重 */
+   netWeight String required,
+   /* 货物总值 */
+   totalAmount String ,
+   /* 尺码 */
+   measure String required,
+   /* 数据汇总 */
+   jsonData TextBlob
+}
+
+
+/** B类快件分运单信息 **/
+entity ExHAWBInfo {
+    id Long,
+    dataId String required,
+    type String required,
+  /* 分运单号 */
+     billNo String required,
+/* 主运单号 */
+     masterBillNo String required,
+     /* 收货人 */
+     consignee String required,
+     /* 发货人 */
+     shipper String required,
+     /* 通知人 */
+     notifier String required,
+     /* 承运人 */
+     carrier String required,
+     /* 收件人 */
+     receiver String required,
+     /* 收货人地址 */
+     receiverAddress String required,
+     /* 收货人电话 */
+     receiveTel String required,
+     /* 发件人 */
+     sender String required,
+/* 发件人地址 */
+     senderAddress String required,
+     /* 发件人电话 */
+     senderTel String required,
+     /* 航班号 */
+     flightNo String required,
+     /* 航班日期 */
+     flightDate String required,
+     /* 装货港 */
+     fromPort String required,
+     /* 装货国家 */
+     fromCountry String required,
+     /* 目的港 */
+     toPort String required,
+     /* 目的国家 */
+     toCountry String required,
+     /* 中转信息 */
+     stopOver String required,
+     /* 货物总值 */
+     totalAmount String required,
+/* 货物总值币制 */
+     totalCurrency String required,
+     /* 唛头 */
+     mark String required,
+     /* 品名描述 */
+     goodsDescription String required,
+     /* 件数 */
+     packNo String required,
+     /* 包装 */
+     packCode String required,
+     /* 毛重 */
+     grossWeight String required,
+     /* 净重 */
+     netWeight String required,
+     /* 重量单位 */
+     weightCode String required,
+     /* 尺码 */
+     measure String required,
+     /* 发票号 */
+     invoiceNo String ,
+    /* 发货单号 */
+     doNo String ,
+/* 数据汇总 */
+     jsonData TextBlob
+}
+
+/*一级监管库*/
+entity ExMasterOrderTally{
+   id Long
+   dataId String required
+   creatTime String
+   /*入库时间*/
+   inDate String
+   /*语言标识*/
+   languageIdentity String
+   /*主运单号*/
+   masterBillNo String
+   /*出库时间*/
+   outDate String
+   /*一级监管理货完毕时间*/
+   tallyDate String
+   jsonData TextBlob
+}
+/*分单理货*/
+entity ExSeparateOrderTally{
+    id Long
+    dataId String required
+    type String required
+    /*分运单号*/
+    billNo String
+    /*主运单号*/
+    masterBillNo String
+    /*快递单号*/
+    flightNo String
+    /*航班日期*/
+    flightDate Instant
+    /*里货日期*/
+    tallyDate Instant
+    /*机检日期*/
+    checkDate Instant
+    /*入库日期*/
+    inDate Instant
+    /*出库日期*/
+    outDate Instant
+    /*查验日期*/
+    examDate Instant
+    /*发票号*/
+    invoiceNo String
+    /*发货单号*/
+    doNo String
+    jsonData TextBlob
+}
+/*快件运营人*/
+entity ExOperator{
+    id Long
+    dataId String required
+    type String required
+    /*分运单号*/
+    billNo String
+    /*主运单号*/
+    masterBillNo String
+    /*快递单号*/
+    expressNo String
+    /*航班信息*/
+    flightNo String
+    /*航班日期*/
+    flightDate Instant
+    /*收货人*/
+    receiver  String
+    /*收货人电话*/
+    receiverTel String
+    /*发货人*/
+    sender String
+    /*发货人电话*/
+    senderTel String
+    /*json数据*/
+    jsonData TextBlob
+}
+/*国内快递*/
+entity ExDomesticExpress{
+    id Long
+    dataId String required
+    type String required
+    expressNo String
+    billNo String
+    consignee String
+    consigneeTel String
+    deliverDate Instant
+    jsonDate TextBlob
+}
+/* 通关信息上链*/
+entity ExCustoms {
+    id Long
+    dataId String required
+    type String required
+    /*分运单号*/
+    billNo String required
+    /*主运单号*/
+    masterBillNo String required
+    /*航班号*/
+    flightNo String required
+    /*航班日期*/
+    flightDate String required
+    /*收件人*/
+    receiver String required
+    /*收货人地址*/
+    receiverAddress String required
+    /*收货人电话*/
+    receiverTel String required
+    /*发件人*/
+    sender String required
+    /*发件人地址*/
+    senderAddress String required
+    /*发件人电话*/
+    senderTel String required
+    /*发行时间*/
+    passDate String required
+    jsonData TextBlob
+}
+
+entity ExDecMessage{
+    id Long
+    /*预报关单号*/
+    preDecNo String
+    /*上链dataId*/
+    dataId  String required
+    type String required
+    /*订单单号*/
+    poNo String
+    /*发货单号*/
+    doNo String
+    decDays String
+    /*主运单号*/
+    masterBillNo String
+    /*发票号*/
+    invoiceNo String
+    /*分运单号*/
+    billNo String
+    /*状态*/
+    status Long
+    /*审单状态*/
+    auditStatus Long
+    /*报关单编号*/
+    entryId String
+    jsonData TextBlob
+    /*po订单对比结果*/
+    poOrderBlob TextBlob
+    /*do订单对比结果*/
+    doOrderBlob TextBlob
+    /*主运单对比结果*/
+    mawbInfoBlob TextBlob
+    /*分运单对比结果*/
+    hawbInfoBlob TextBlob
+    /*主单理货对比结果*/
+    masterOrderTallyBlob TextBlob
+    /*分单理货对比结果*/
+    separateOrderTallyBlob TextBlob
+    /*交叉验证结果*/
+    importerBlob TextBlob
+    /*银行信息对比结果*/
+    bankBlob TextBlob
+    /*通关信息对比结果*/
+    customsBlob TextBlob
+    /*提交后的报关单数据xml*/
+    xmlData TextBlob
+}
+
+dto * with mapstruct
+service all with serviceImpl
+
+paginate ExTransport with pagination
+paginate ExMAWBInfo with pagination
+paginate ExHAWBInfo with pagination
+paginate ExMasterOrderTally with pagination
+paginate ExSeparateOrderTally with pagination
+paginate ExOperator with pagination
+paginate ExDomesticExpress with pagination
+paginate ExCustoms with pagination
+paginate ExDecMessage with pagination
+

@@ -1,0 +1,23 @@
+
+{
+    "jhipsterdemo01App": {
+        "exTransport" : {
+            "home": {
+                "title": "Ex Transports",
+                "createLabel": "Create a new Ex Transport",
+                "createOrEditLabel": "Create or edit a Ex Transport"
+            },
+            "created": "A new Ex Transport is created with identifier {{ param }}",
+            "updated": "A Ex Transport is updated with identifier {{ param }}",
+            "deleted": "A Ex Transport is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Ex Transport {{ id }}?"
+            },
+            "detail": {
+                "title": "Ex Transport"
+            },
+            "ex_extransport": "Ex Extransport",
+            "ex_extransporta": "Ex Extransporta"
+        }
+    }
+}

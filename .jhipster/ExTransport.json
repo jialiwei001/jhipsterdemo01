@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "ex_extransport",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "ex_extransporta",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20181111112916",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "no",
+    "entityTableName": "ex_transport",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

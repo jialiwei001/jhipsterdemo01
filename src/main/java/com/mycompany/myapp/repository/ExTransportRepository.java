@@ -14,5 +14,7 @@ import java.util.List;
 @Repository
 public interface ExTransportRepository extends JpaRepository<ExTransport, Long> {
 
-    List<ExTransport> findByEx_extransport(String ex_extransport);
+    List<ExTransport> findByEx_extransport(String eeeeexxxx);
+
+
 }
